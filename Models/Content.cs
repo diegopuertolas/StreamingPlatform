@@ -3,9 +3,9 @@ namespace StreamingPlatform.Models;
 public abstract class Content
 {
     public string Title { get; set; }
-    public double Duration { get; set; }
+    public int Duration { get; set; }
 
-    public Content(string title, double duration)
+    public Content(string title, int duration)
     {
         Title = title;
         Duration = duration;
