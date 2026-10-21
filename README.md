@@ -86,3 +86,21 @@ Si no existe:
 ```csharp
 No se ha encontrado el contenido.
 ```
+
+## Filtrar películas
+
+Utilizando la colección del ejercicio de streaming, mostrar solamente los objetos que sean de tipo Pelicula.
+
+Utilizar el operador:
+
+```csharp
+is
+```
+
+Después, modificar el programa para mostrar únicamente las series.
+
+Responder:
+
+1. ¿De qué tipo es la colección?
+2. ¿De qué tipo es la variable utilizada en el foreach?
+3. ¿Cómo puede el programa saber si un determinado Contenido es realmente una Pelicula?
