@@ -60,3 +60,29 @@ List<Contenido>
 ```
 
 Recorrer la colección y mostrar la descripción de cada contenido.
+
+## Buscar contenido
+
+Solicitar al usuario:
+
+```csharp
+Título a buscar:
+```
+
+Buscar el contenido recorriendo la colección.
+
+La búsqueda no deberá depender de mayúsculas y minúsculas.
+
+Si existe:
+
+```bash
+Contenido encontrado:
+
+Interstellar - 169 minutos
+```
+
+Si no existe:
+
+```csharp
+No se ha encontrado el contenido.
+```
