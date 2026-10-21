@@ -17,6 +17,7 @@ var allContent = new List<Content>
 
 GetContent(allContent);
 GetFilms(allContent);
+GetSeries(allContent);
 SearchFilm(allContent);
 
 
@@ -65,6 +66,18 @@ static void GetFilms(List<Content> allContent)
     foreach (var content in allContent)
     {
         if (content is Film)
+        {
+            Console.WriteLine(content.GetDescription());
+        }
+    }
+}
+
+static void GetSeries(List<Content> allContent)
+{
+    Console.WriteLine("LISTADO DE SERIES");
+    foreach (var content in allContent)
+    {
+        if (content is Series)
         {
             Console.WriteLine(content.GetDescription());
         }
