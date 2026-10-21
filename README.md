@@ -101,6 +101,11 @@ Después, modificar el programa para mostrar únicamente las series.
 
 Responder:
 
-1. ¿De qué tipo es la colección?
+1. ¿De qué tipo es la colección? 
+La colección es del tipo que establezcamos nosotros.
+
 2. ¿De qué tipo es la variable utilizada en el foreach?
+De tipo Product.
+
 3. ¿Cómo puede el programa saber si un determinado Contenido es realmente una Pelicula?
+Ya que con el is determinamos si el producto es una instancia de alguna de las clases hijas.
