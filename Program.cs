@@ -2,9 +2,9 @@
 
 var origin = new Film("Origén", 120, "Christopher Nolan");
 var goodFellas = new Film("Uno de los nuestros", 95, "Martin Scorsese");
-var twinPeaks = new Film("Twin Peaks", 2000, "David Lynch");
-var mindHunter = new Film("Mindhunter", 1800, "David Fincher");
-var freeSolo = new Film("Free Solo", 65, "Jimmy Chin");
+var twinPeaks = new Series("Twin Peaks", 2000, 3);
+var mindHunter = new Series("Mindhunter", 1800, 2);
+var freeSolo = new Documentary("Free Solo", 65, "Climbing");
 
 var allContent = new List<Content>
 {
@@ -15,12 +15,16 @@ var allContent = new List<Content>
     freeSolo
 };
 
+GetContent(allContent);
 GetFilms(allContent);
+GetSeries(allContent);
+GetDocumentaries(allContent);
 SearchFilm(allContent);
 
 
-static void GetFilms(List<Content> allContent)
+static void GetContent(List<Content> allContent)
 {
+    Console.WriteLine("LISTADO DE CONTENIDOS");
     foreach (var content in allContent)
     {
         Console.WriteLine(content.GetDescription());
@@ -57,3 +61,38 @@ static void SearchFilm(List<Content> allContent)
     }
 }
 
+static void GetFilms(List<Content> allContent)
+{
+    Console.WriteLine("LISTADO DE PELICULAS");
+    foreach (var content in allContent)
+    {
+        if (content is Film)
+        {
+            Console.WriteLine(content.GetDescription());
+        }
+    }
+}
+
+static void GetSeries(List<Content> allContent)
+{
+    Console.WriteLine("LISTADO DE SERIES");
+    foreach (var content in allContent)
+    {
+        if (content is Series)
+        {
+            Console.WriteLine(content.GetDescription());
+        }
+    }
+}
+
+static void GetDocumentaries(List<Content> allContent)
+{
+    Console.WriteLine("LISTADO DE DOCUMENTALES");
+    foreach (var content in allContent)
+    {
+        if (content is Documentary)
+        {
+            Console.WriteLine(content.GetDescription());
+        }
+    }
+}
