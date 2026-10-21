@@ -19,7 +19,7 @@ GetFilms(allContent);
 SearchFilm(allContent);
 
 
-static void GetFilms(List<Content> allContent)
+static void GetContent(List<Content> allContent)
 {
     foreach (var content in allContent)
     {
@@ -56,4 +56,5 @@ static void SearchFilm(List<Content> allContent)
         Console.WriteLine("Título no encontrado.");
     }
 }
+
 
