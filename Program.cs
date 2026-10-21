@@ -15,7 +15,35 @@ var allContent = new List<Content>
     freeSolo
 };
 
+Console.WriteLine("Listado de películas: ");
 foreach(var content in allContent)
 {
     Console.WriteLine(content.GetDescription());
+}
+
+Console.Write("\nTítulo a buscar: ");
+
+string searchTitle = Console.ReadLine();
+string modifiedInput = searchTitle.Trim().ToLower();
+
+if (string.IsNullOrWhiteSpace(modifiedInput))
+{
+    Console.WriteLine("Debes escribir el nombre de la película.");
+    return;
+}
+
+var found = false;
+foreach (var content in allContent)
+{
+    if (modifiedInput.Equals(content.Title.Trim().ToLower()))
+    {
+        Console.WriteLine($"Contenido encontrado: \n{ content.GetDescription() }");
+        found = true;
+        break;
+    }
+}
+
+if (!found)
+{
+    Console.WriteLine("Título no encontrado.");    
 }
