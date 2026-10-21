@@ -59,4 +59,14 @@ static void SearchFilm(List<Content> allContent)
     }
 }
 
-
+static void GetFilms(List<Content> allContent)
+{
+    Console.WriteLine("LISTADO DE PELICULAS");
+    foreach (var content in allContent)
+    {
+        if (content is Film)
+        {
+            Console.WriteLine(content.GetDescription());
+        }
+    }
+}
