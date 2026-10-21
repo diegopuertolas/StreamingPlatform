@@ -15,12 +15,14 @@ var allContent = new List<Content>
     freeSolo
 };
 
+GetContent(allContent);
 GetFilms(allContent);
 SearchFilm(allContent);
 
 
 static void GetContent(List<Content> allContent)
 {
+    Console.WriteLine("LISTADO DE CONTENIDOS");
     foreach (var content in allContent)
     {
         Console.WriteLine(content.GetDescription());
